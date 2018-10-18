@@ -1,4 +1,8 @@
 .advantages {
+    width: 75%;
+    min-width: 320px;
+    max-width: 480px;
+    margin: 0 auto;
     padding-bottom: 40px;
     background-image: url(../img/advantage-shape.png);
     background-size: contain;
@@ -73,6 +77,8 @@
 }
 
 .slider__toggle {
+    width: 25px;
+    height: 25px;
     margin-left: 15px;
     background-color: transparent;
     border: 0;
@@ -95,3 +101,23 @@
 .slider__toggle:nth-child(1)::before {
     background-color: #ffffff;
 }
+
+@media(min-width: @tablet-width) {
+    .slider__toggles {
+        display: none;
+    }
+    .slider__item {
+        display: list-item;
+    }
+    .advantages__item {
+        margin-left: 130px;
+    }
+    .advantages__title {
+        text-align: left;
+    }
+    .advantages__description {
+        text-align: left;
+    }
+}
+
+@media(min-width: @desktop-width) {}
