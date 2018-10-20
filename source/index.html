@@ -168,7 +168,12 @@
                 <div class="reviews__list slider__list">
                     <blockquote class="reviews__item slider__item slider__item--active">
                         <p class="reviews__author-picture">
-                            <img src="img/picture-travis.jpg" width="50" height="51" alt="Фото Трэвиса Баркера" class="reviews__author-img">
+                            <picture>
+                                <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+                                <source media="(min-width: 768px)" srcset="img/picture-travis2.png">
+                                <img src="img/picture-travis.jpg" width="50" height="51" alt="Фото Трэвиса Баркера"
+                                    class="reviews__author-img">
+                            </picture>
                         </p>
                         <cite class="reviews__author-name">Трэвис Баркер</cite>
                         <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы
@@ -189,8 +194,8 @@
                         <cite class="reviews__author-name">Иван Бородайл</cite>
                         <p class="reviews__text">В Бородинском ваша борода в надёжных руках!</p>
                     </blockquote>
-                    <button type="button" class="reviews__prev">Предыдущый отзыв</button>
-                    <button type="button" class="reviews__next">Следуюшый отзыв</button>
+                    <button type="button" class="reviews__prev"><span class="visually-hidden">Предыдущый отзыв</span></button>
+                    <button type="button" class="reviews__next"><span class="visually-hidden">Следуюшый отзыв</span></button>
                     <p class="reviews__toggles slider__toggles">
                         <button type="button" class="slider__toggle"><span class="slider__toggle__number">1</span></button>
                         <button type="button" class="slider__toggle"><span class="slider__toggle__number">2</span></button>

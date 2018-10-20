@@ -1,8 +1,5 @@
 .news {
-    width: 75%;
-    min-width: 320px;
-    max-width: 480px;
-    margin: 0 auto;
+    .mobile-wrapper();
     background-color: @bg-lightgray;
     color: #000000;
 }
@@ -76,3 +73,34 @@
         color: #958c84;
     }
 }
+
+@media(min-width: @tablet-width) {
+    .news {
+        position: relative;
+        .mobile-wrapper-reset();
+    }
+    .news__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 50px 65px;
+        padding-bottom: 0;
+    }
+    .news__title {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+    .news__list {
+        display: flex;
+    }
+    .news__item {
+        margin-bottom: 10px;
+        padding-right: 4%;
+    }
+    .news .button {
+        position: absolute;
+        top: 40px;
+        right: 65px;
+        order: -1;
+        width: 160px;
+    }
+} 

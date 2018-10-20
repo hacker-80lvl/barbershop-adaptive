@@ -1,9 +1,6 @@
 .main-nav {
     position: relative;
-    width: 75%;
-    min-width: 320px;
-    max-width: 480px;
-    margin: 0 auto;
+    .mobile-wrapper();
     min-height: 51px;
     background-color: #826550;
 }
@@ -146,6 +143,8 @@
 
 @media (min-width: @tablet-width) {
     .main-nav {
+        min-width: none;
+        max-width: none;
         width: auto;
         margin: 0;
         

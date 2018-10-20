@@ -1,8 +1,5 @@
 .page-footer {
-    width: 75%;
-    min-width: 320px;
-    max-width: 480px;
-    margin: 0 auto;
+    .mobile-wrapper();
     padding-top: 35px;
     border: 1px solid #353535;
     text-align: center;
@@ -41,12 +38,12 @@
 .social__item {
     width: 33%;
     height: 100px;
-    opacity: 0.6;
+    opacity: 0.3;
     &:hover {
         opacity: 1;
     }
     &:active {
-        opacity: 0.3;
+        opacity: 0.1;
     }
 }
 
@@ -70,19 +67,24 @@
     &--facebook::after {
         top: 32px;
         background-image: url(../img/facebook-icon-big.png);
-        
     }
     &--instagram::after {
         top: 35px;
         background-image: url(../img/insta-icon-big.png);
         transform: translateX(-35%);
     }
-    &--vkontakte,
     &--facebook {
         border-right: 1px solid #3e3e3e;
+        border-left: 1px solid #3e3e3e;
     }
 }
 
 .copyright__link {
     margin-bottom: 25px;
+}
+
+@media (min-width: @tablet-width) {
+    .page-footer {
+        .mobile-wrapper-reset();
+    }
 }
