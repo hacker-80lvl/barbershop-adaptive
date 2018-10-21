@@ -1,0 +1,101 @@
+.login__username,
+.login__password {
+    margin-bottom: 10px;
+    padding: 18px 20px;
+    padding-right: 75px;
+    font-size: 24px;
+    line-height: 30px;
+    &:focus {
+        outline-color: #999999;
+    }
+}
+
+.login__password {
+    margin-bottom: 30px;
+}
+
+.login div {
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+}
+
+.login__remember {
+    position: relative;
+    margin-left: 50px;
+    &:hover .login__checkbox-indicator {
+        border-color: #d5c9bd;
+    }
+    &:active .login__checkbox-indicator {
+        background-color: #d5c9bd;
+    }
+}
+
+.login__checkbox-indicator {
+    position: absolute;
+    top: -3px;
+    left: -50px;
+    display: block;
+    width: 31px;
+    height: 31px;
+    border: 1px solid #e5ddd5;
+    background-color: #fff;
+}
+
+#login__remember:checked+.login__checkbox-indicator {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 7px;
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #000000;
+        transform: rotate(-45deg);
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 16px;
+        left: 7px;
+        display: block;
+        width: 2px;
+        height: 8px;
+        background-color: #000000;
+        transform: rotate(-45deg);
+    }
+}
+
+#login__remember:focus+.login__checkbox-indicator {
+    outline: thin dotted;
+    outline: 5px auto #999999;
+}
+
+.login__forget {
+    color: #000;
+    font-weight: 700;
+    &:hover {
+        color: rgb(58, 102, 197);
+        text-decoration: none;
+    }
+    &:active {
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
+
+.login__button {
+    width: 100%;
+    background-color: #826550;
+    color: #ffffff;
+    &:hover {
+        background-color: #6a4d38;
+    }
+    &:active {
+        color: #978374;
+    }
+    &:disabled {
+        background-color: #aeaeae;
+    }
+}
