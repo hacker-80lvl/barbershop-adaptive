@@ -1,23 +1,45 @@
+.login {
+    position: relative;
+}
+
 .login__username,
 .login__password {
+    width: 100%;
     margin-bottom: 10px;
-    padding: 18px 20px;
-    padding-right: 75px;
+    padding: 8px 6%;
+    padding-right: 20%;
     font-size: 24px;
     line-height: 30px;
+    box-sizing: border-box;
     &:focus {
         outline-color: #999999;
+    }
+    &:focus~.login__icon--user {
+        opacity: 1;
     }
 }
 
 .login__password {
     margin-bottom: 30px;
+    &:focus~.login__icon--lock {
+        opacity: 1;
+    }
 }
 
-.login div {
-    display: flex;
-    justify-content: space-between;
-    width: 320px;
+.login__icon {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/icon_user.png);
+    opacity: 0.6;
+    &--lock {
+        top: 77px;
+        height: 17px;
+        background-image: url(../img/icon_lock.png);
+    }
 }
 
 .login__remember {
@@ -86,7 +108,7 @@
 }
 
 .login__button {
-    width: 100%;
+    width: 45%;
     background-color: #826550;
     color: #ffffff;
     &:hover {
@@ -97,5 +119,23 @@
     }
     &:disabled {
         background-color: #aeaeae;
+    }
+}
+
+@media(min-width: @tablet-width) {
+    .login__username,
+    .login__password {
+        padding: 18px 20px;
+        padding-right: 75px;
+    }
+    .login__icon {
+        top: 27px;
+        right: 27px;
+        &--lock {
+            top: 107px;
+        }
+    }
+    .login__button {
+        width: 100%;
     }
 }

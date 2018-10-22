@@ -250,8 +250,8 @@
             <h2 class="modal__title">Личный кабинет</h2>
             <p class="modal__text">Введите свой логин и пароль, чтобы войти</p>
             <form action="#" method="POST" class="modal__form login">
-                <input type="text" class="login__username" placeholder="Логин">
-                <br><input type="password" class="login__password" placeholder="Пароль">
+                <input type="text" class="login__username" placeholder="Логин" maxlength="24"><span class="login__icon login__icon--user"></span>
+                <br><input type="password" class="login__password" placeholder="Пароль" maxlength="36"><span class="login__icon login__icon--lock"></span>
                 <div>
                     <label for="login__remember" class="login__remember">
                         <input type="checkbox" name="remember" class="visually-hidden" id="login__remember">
@@ -260,9 +260,12 @@
                     </label>
                     <a href="#" class="login__forget">Я забыл пароль!</a>
                 </div>
-                <br><button type="submit" class="login__button button">Войти в личный кабинет</button>
+                <br>
+                <div>
+                    <button type="submit" class="login__button button">Войти <span class="mobile--hidden">в личный кабинет</span></button>
+                    <button type="button" class="modal__close"><span class="tablet--hidden">Закрыть <span class="mobile--hidden">форму</span></span></button>
+                </div>
             </form>
-            <button type="button" class="modal__close"><span class="visually-hidden">Закрыть форму</span></button>
         </div>
     </section>
 
