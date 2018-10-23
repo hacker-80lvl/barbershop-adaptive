@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preload" href="fonts/ptsansnarrow.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansnarrowbold.woff2" as="font">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Наши работы :: Барбершоп «Бородинский»</title>
+</head>
+
+<body>
+    
+    <header class="page-header">
+        <div class="page-header__logo">
+            <a href="index.html">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+                    <img src="img/logotype-mobile.svg" alt="Барбершоп «Бородинский»" width="226" height="30">
+                </picture>
+            </a>
+        </div>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+            <button type="button" class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
+            <div class="main-nav__wrapper">
+                <ul class="main-nav__list site-list">
+                    <li class="site-list__item"><a href="index.html">Главная</a></li>
+                    <li class="site-list__item site-list__item--active"><a>Наши работы</a></li>
+                    <li class="site-list__item"><a href="#">Записаться</a></li>
+                    <li class="site-list__item"><a href="#">Контакты</a></li>
+                    <li class="site-list__item"><a href="#">HTML Academy</a></li>
+                </ul>
+                <ul class="main-nav__list user-list">
+                    <li class="user-list__item">
+                        <a href="#" class="user-list__login">
+                            <svg class="user-list__login-icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 16 16">
+                                <polygon points="0 7 7.01 7 7.01 4.86 10.96 8.01 7.01 11.91
+                                    7.01 9.06 0 9.82 0 7" />
+                                <polygon points="7.01 0 7.01 2 14.03 2 14.03 13.99 7.01 13.99
+                                    7.01 16 16 16 16 0 7.01 0" />
+                            </svg>
+                            Войти
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="page-main">
+        
+    </main>
+    
+    <footer class="page-footer">
+        <div class="page-footer__contacts contacts">
+            <b class="contacts__title">Барбершоп Бородинский</b>
+            <p class="contacts__text">
+                <span class="contacts__address">г. Санкт-Петербург, ул. Большая Конюшенная 19/8</span>
+                <br><a href="tel:+78125556666" class="contacts__phone button">
+                    <span class="contacts__phone-mobile">Тел.: +7 (812) 555-66-66</span>
+                </a>
+            </p>
+        </div>
+        <div class="page-footer__social social">
+            <b class="social__title">Давайте дружить!</b>
+            <ul class="social__list">
+                <li class="social__item">
+                    <a href="https://vk.com" target="_blank" class="social__link social__link--vkontakte"><span class="visually-hidden">Мы
+                            в Вконтакте</span></a>
+                </li>
+                <li class="social__item">
+                    <a href="https://facebook.com" target="_blank" class="social__link social__link--facebook"><span
+                            class="visually-hidden">Мы
+                            в
+                            Фейсбуке</span></a>
+                </li>
+                <li class="social__item">
+                    <a href="https://instagram.org" target="_blank" class="social__link social__link--instagram"><span
+                            class="visually-hidden">Мы
+                            в
+                            Инстаграме</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+            Разработано:
+            <br>
+            <a href="https://github.com/hacker-80lvl/" target="_blank" class="button copyright__link">hacker-80lvl</a>
+        </div>
+    </footer>
+
+    <section class="modal visually-hidden">
+        <div class="modal__wrapper">
+            <h2 class="modal__title">Личный кабинет</h2>
+            <p class="modal__text">Введите свой логин и пароль, чтобы войти</p>
+            <form action="#" method="POST" class="modal__form login">
+                <input type="text" class="login__username" placeholder="Логин" maxlength="24"><span class="login__icon login__icon--user"></span>
+                <br><input type="password" class="login__password" placeholder="Пароль" maxlength="36"><span class="login__icon login__icon--lock"></span>
+                <div>
+                    <label for="login__remember" class="login__remember">
+                        <input type="checkbox" name="remember" class="visually-hidden" id="login__remember">
+                        <span class="login__checkbox-indicator"></span>
+                        Запомните меня
+                    </label>
+                    <a href="#" class="login__forget">Я забыл пароль!</a>
+                </div>
+                <br>
+                <div>
+                    <button type="submit" class="login__button button">Войти <span class="mobile--hidden">в личный
+                            кабинет</span></button>
+                    <button type="button" class="modal__close"><span class="tablet--hidden">Закрыть <span class="mobile--hidden">форму</span></span></button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <script src="js/script.js"></script>
+</body>
+
+</html>
