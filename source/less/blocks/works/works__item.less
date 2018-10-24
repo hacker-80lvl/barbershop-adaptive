@@ -1,3 +1,30 @@
+.works-item {
+    margin-bottom: 20px;
+    &--work-of-month {
+        position: relative;
+        &::after {
+            content: "Работа месяца";
+            position: absolute;
+            bottom: 310px;
+            left: 0;
+            display: block;
+            width: 191px;
+            height: 55px;
+            padding-top: 12px;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 27px;
+            color: #ffffff;
+            background-image: url(../img/works-shape2.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            box-sizing: border-box;
+        }
+    }
+}
+
 .works-item__image-wrapper {
     margin: 0;
     text-align: center;
@@ -6,7 +33,63 @@
     }
 }
 
+.works-item__review {
+    margin-top: -7px;
+    padding: 20px;
+    border: 1px solid #e5ddd5;
+    border-top: none;
+    box-sizing: border-box;
+}
+
+.works-item__title {
+    margin-top: 0px;
+}
+
 .works-item__text {
     padding: 0;
     margin: 0;
+}
+
+.works-item__parameter-list {
+    .list-reset();
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.works-item__parameter-item {
+    position: relative;
+    width: 105px;
+    margin-right: 30px;
+    margin-top: 25px;
+    text-align: right;
+    text-transform: uppercase;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 0;
+        display: block;
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+        background-image: url(../img/scissors-icon.png);
+    }
+    &--shaving {
+        width: 90px;
+        &::before {
+            width: 23px;
+            height: 21px;
+            background-image: url(../img/beard-icon.png);
+        }
+    }
+    &--mustache {
+        width: 85px;
+        &::before {
+            top: 8px;
+            width: 45px;
+            height: 12px;
+            background-image: url(../img/mustache-icon.png);
+        }
+    }
 }
