@@ -1,3 +1,65 @@
 .price-list {
     .mobile-wrapper();
+    padding: 20px 50px;
+    padding-bottom: 35px;
+    background-color: #353535;
+    background-image: url(../img/reviews-shape.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    box-sizing: border-box;
+}
+
+.price-list__title {
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.price-list__table {
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+}
+
+.price-list__table .tablet--hidden,
+.price-list__table td:nth-child(4) {
+    font-weight: 400;
+}
+
+.price-list__table tr {
+    width: 50%;
+}
+
+.price-list__table td {
+    padding-bottom: 10px;
+    vertical-align: top;
+}
+
+.price-list__table td:nth-child(1),
+.price-list__table td:nth-child(3) {
+    display: none;
+}
+
+.price-list__sale-time {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    padding-left: 50%;
+    border: 1px solid #484848;
+    font-size: 20px;
+    line-height: 27px;
+    box-sizing: border-box;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 17px;
+        left: 10%;
+        display: block;
+        width: 58px;
+        height: 58px;
+        background-image: url(../img/clock.png);
+        background-size: contain;
+    }
 }
